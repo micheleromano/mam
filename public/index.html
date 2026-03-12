@@ -116,12 +116,24 @@
       animation: fadeDown 1s ease-out;
     }
 
-    .mascot {
-      width: 100px;
-      height: auto;
-      margin-bottom: 12px;
-      filter: drop-shadow(0 4px 12px rgba(44, 24, 16, 0.08));
+    .mascot-card {
+      width: 140px;
+      height: 140px;
+      border-radius: 32px;
+      background: rgba(255, 248, 240, 0.95);
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+      overflow: hidden;
       animation: gentle-breathe 6s ease-in-out infinite;
+    }
+
+    .mascot-card img {
+      width: 80%;
+      height: auto;
+      filter: drop-shadow(0 4px 12px rgba(44, 24, 16, 0.08));
     }
 
     @keyframes gentle-breathe {
@@ -738,7 +750,9 @@
 <div class="app-container">
   <!-- HEADER -->
   <header class="header">
-    <img src="img/mascot.png" alt="Meditation mascot" class="mascot">
+    <div class="mascot-card">
+      <img src="/mascot.png" alt="Meditation mascot">
+    </div>
     <h1 class="site-title">Music as Meditation</h1>
     <p class="site-subtitle">Breathe · Listen · Release</p>
     <div class="divider"></div>
