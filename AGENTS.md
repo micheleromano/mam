@@ -1,0 +1,22 @@
+# Music as Meditation (mam)
+
+Mobile-first static web app: meditation music player (solfeggio tones) + a "wish ritual" (type/dictate a wish, release it with a particle animation and chime).
+
+- **Stack:** plain HTML/CSS/JS in `public/` (`index.html`, `mascot.png`). No build step.
+- **Hosting:** Firebase Hosting, project `music-as-meditation` (`.firebaserc`). Deploy: `firebase deploy`.
+- **Run locally:** `cd public && python3 -m http.server 8000`
+- **Repo:** github.com/micheleromano/mam
+- See `README.md` for replacing the placeholder music tracks.
+
+<!-- agent-scaffold:principles -->
+## How to work
+
+Adapted from Andrej Karpathy's notes on common LLM coding mistakes (https://x.com/karpathy/status/2015883857489522876, via github.com/multica-ai/andrej-karpathy-skills) and the Center for Humane Technology's principles (https://www.humanetech.com/humane-product-design). These favor care over speed; for trivial tasks, use judgment.
+
+1. **Think before coding.** Say what you're assuming. If a request can be read more than one way, lay out the readings instead of picking one quietly. If something is unclear, stop and ask. If there's a simpler approach, propose it.
+2. **Keep it simple.** Write the least code that solves the problem: no features, options or abstractions nobody asked for, and no handling for cases that can't happen. If a senior engineer would call it overbuilt, cut it down.
+3. **Make surgical changes.** Every changed line should trace back to the request. Match the existing style, leave unrelated code alone, and mention problems you notice instead of fixing them unasked. Do clean up anything your own change made unused.
+4. **Work toward a verifiable goal.** Turn the task into a check you can run, such as a failing test that should pass. For multi-step work, write a short plan with a check for each step, and keep going until the checks pass.
+5. **Keep people in control.** Ask before anything irreversible or outward-facing: deleting data, migrations, deploys, publishing, sending messages. Explain trade-offs in plain words and recommend one option. Report what you verified and what you didn't; never claim a check passed that you didn't run.
+6. **Use current, compatible dependencies.** When adding a dependency, setting up a stack or upgrading, look up the latest stable version of each package at that moment (e.g. `npm view <package> version`, `pip index versions <package>`); don't rely on versions you remember. Check that their peer and runtime requirements fit together before installing, and say so if they don't. The package file and its lockfile are the only record of versions: don't write version numbers into `AGENTS.md` or other docs.
+<!-- /agent-scaffold:principles -->
